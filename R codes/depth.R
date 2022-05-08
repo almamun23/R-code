@@ -1,0 +1,5 @@
+getwd()
+setwd("F:/pogo")
+d=read.csv("d.csv")
+p=ggplot(d, aes(x = Station, y = Depth, colour = Station)) + geom_point(aes(size=1)) + scale_y_reverse() + theme_bw() +  labs(y = "Depth (m)", x = "Station")
+p+theme(legend.position = "none") + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
